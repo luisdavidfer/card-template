@@ -1,0 +1,111 @@
+    /* Background */
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font: normal 14px/1.618em sans-serif;
+}
+
+html{
+    background: linear-gradient(to bottom right, #e66465, #9198e5);
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -2;
+}
+
+    /* Card content */
+
+#card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-width: 600px;
+    background-color: white;
+    text-align: center;
+    padding: 30px 30px 10px 30px;
+    border-radius: 1%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+}
+#card #image{
+    width: 125px;
+    border-radius: 50%;
+    margin: 20px 0px 10px 0px;
+}
+#card #nickname{
+    margin: 35px;
+}
+
+#card #bio{
+    max-height: 250px;
+    overflow: scroll;
+}
+
+#card #networks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+#card #networks div{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#card #networks div:hover{
+    opacity: 0.5;
+}
+
+#card #networks div a img{
+    max-width: 30px;
+    max-height: 30px;
+}
+    /* Footer */
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    color: white;
+    font-size: small;
+    z-index: -1;
+}
+footer span{
+    color: red;
+}
+
+footer a{
+    color: white;
+}
+    /* Mobile */
+    
+@media (max-width: 400px){
+    #card{
+        width: 75%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 0%;
+    }
+    #card #bio{
+        max-height: 100px;
+    }
+}
+
+@media (max-height: 600px){
+    #card #image{
+        display: none;
+    }
+}
